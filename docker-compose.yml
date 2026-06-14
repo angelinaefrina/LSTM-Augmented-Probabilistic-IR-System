@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ir-workspace:
+    build: .
+    container_name: lstm_ir_experiment
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    tty: true
